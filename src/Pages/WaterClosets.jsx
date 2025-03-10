@@ -74,21 +74,63 @@ function WaterClosets() {
       image:
         "https://www.inart.co.in/cdn/shop/products/31FkMwfcdvL.jpg?v=1665142203&width=493",
     },
+    {
+      id: 11,
+      name: "Ceramic Floor Mounted Western Toilet - European Water Closet Syphonic with Soft Close Hydraulic Seat Cover and Rimless Dual Flush System, S-Trap (66cm x 37cm x 74cm)(One Piece Toilet, Green) ",
+      price: "₹ 12,799.00",
+      image:
+        "https://www.inart.co.in/cdn/shop/files/01-Copy_d0bd47bb-748d-4fc5-9408-0e3023c8cd7e.jpg?v=1723290537&width=493",
+    },
+    {
+      id: 12,
+      name: "Ceramic Floor Mounted Western Toilet - European Water Closet Syphonic with Soft Close Hydraulic Seat Cover and Rimless Dual Flush System, S-Trap (66cm x 37cm x 74cm)(One Piece Toilet, Brown)",
+      price: "₹ 12,799.00",
+      image:
+        "https://www.inart.co.in/cdn/shop/files/01-Copy_80039876-4ecb-489f-a617-baebf77a3340.jpg?v=1723290511&width=493",
+    },
+    {
+      id: 13,
+      name: "Ceramic Floor Mounted Western Toilet - European Water Closet Syphonic with Soft Close Hydraulic Seat Cover and Rimless Dual Flush System, S-Trap (66cm x 37cm x 74cm)(One Piece Toilet, Pink)",
+      price: "₹ 12,799.00",
+      image:
+        "https://www.inart.co.in/cdn/shop/files/01-Copy_cea1e643-17e5-4ade-953d-512b9c2e39b5.jpg?v=1723290479&width=493",
+    },
+    {
+      id: 14,
+      name: "Ceramic Floor Mounted Western Toilet - European Water Closet Syphonic with Soft Close Hydraulic Seat Cover and Rimless Dual Flush System, S-Trap (66cm x 37cm x 74cm)(One Piece Toilet, Black)",
+      price: "₹ 12,799.00",
+      image:
+        "https://www.inart.co.in/cdn/shop/files/01-Copy_7f25b84d-d9e5-49f0-9fa8-625ace61d52c.jpg?v=1723290429&width=493",
+    },
+    {
+      id: 15,
+      name: "Ceramic One Piece Western Toilet/Commode With Soft Close Toilet Seat - S Trap Outlet in Blue Color",
+      price: "₹ 17,990.00",
+      image:
+        "https://www.inart.co.in/cdn/shop/files/2_0cabb7eb-3695-41f4-95a0-afad0090cc6e.png?v=1720452341&width=493",
+    },
+    {
+      id: 16,
+      name: "InArt Ceramic One Piece Western Toilet with Soft Close Seat, S Trap, White & Blue - 66.5x45.5x56 cm",
+      price: "₹ 19,970.00",
+      image:
+        "https://www.inart.co.in/cdn/shop/files/1_dd37549a-9205-412b-a09d-a2247cf66a61.png?v=1712033060&width=493",
+    },
   ];
   return (
-    <div>
+    <div className="w-full lg:px-10 flex flex-col gap-4 bg-[#f7f7fc]">
       <CategorySearch />
       <span className="flex justify-center items-center text-lg lg:text-2xl font-medium">
         Water Closets
       </span>
       <div className="p-4 mb-14 flex justify-center items-center">
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
           {products.map((product) => (
             <div
               key={product.id}
               className=" rounded-xl text-center flex flex-col items-center"
             >
-              <div className="relative w-full h-40 lg:h-56">
+              <div className="relative w-full h-40 lg:h-72">
                 <img
                   src={product.image}
                   alt={product.name}

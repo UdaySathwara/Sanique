@@ -5,7 +5,7 @@ function Footer() {
   const navigate = useNavigate();
 
   return (
-    <div className="flex justify-around items-center bg-[#f7f7fc] w-full fixed bottom-0 h-14 p-2">
+    <div className="flex justify-around items-center bg-[#f7f7fc] w-full fixed bottom-0 h-16 p-2">
       <button
         className="flex flex-col items-center hover:text-[#8686fc]"
         onClick={() => navigate("/")}

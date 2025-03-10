@@ -35,7 +35,7 @@ function Category() {
     },
     {
       name: "Bath Tubs",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLt731d6cg8d1ginefcDlyJfagzTcWqtqEbA&s=10",
+      image: "https://images.stockcake.com/public/5/3/9/539115cc-352e-48c7-b202-b79ec400e7b7_large/elegant-vintage-bath-stockcake.jpg",
       products: 24,
       path: "/bath-tubs",
     },
@@ -48,16 +48,16 @@ function Category() {
   ];
 
   return (
-    <div className="bg-[#f7f7fc] mb-14">
+    <div className="bg-[#f7f7fc] pb-14 w-full flex flex-col gap-4 min-h-screen">
       <Navbar />
       <ScrollNav />
-      <div className="flex p-3 flex-col gap-2">
+      <div className="flex pb-2 px-3 md:px-10 flex-col gap-2 lg:gap-7 lg:grid lg:grid-cols-2 lg:px-20">
         {category.map((item, index) => (
           <div key={index} className="relative w-full h-full cursor-pointer" onClick={() => navigate(item.path)}>
             <img
               src={item.image}
               alt="Sanitary Ware"
-              className="w-full h-32 rounded-2xl object-cover"
+              className="w-full h-32 rounded-2xl object-cover lg:h-40"
             />
             <div
               className={`absolute inset-0 flex flex-col justify-center p-8 ${
