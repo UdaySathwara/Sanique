@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Heart } from "lucide-react";
 
-export default function FavoriteIcon() {
-  const [isActive, setIsActive] = useState(false);
-
+export default function FavoriteIcon({ isActive, onToggle }) {
   return (
     <button
-      onClick={() => setIsActive(!isActive)}
+      onClick={onToggle} // Parent controls toggle behavior
       className="p-2 rounded-full transition-all duration-300"
     >
       <Heart

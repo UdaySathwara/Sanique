@@ -16,7 +16,7 @@ function Footer() {
 
       <button
         className="flex flex-col items-center hover:text-[#8686fc]"
-        onClick={() => navigate("/category")}
+        onClick={() => navigate("/products")}
       >
         <span className="material-symbols-outlined">inventory_2</span>
         <span className="hover:text-[#8686fc] text-xs">Products</span>

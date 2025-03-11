@@ -5,13 +5,17 @@ import Home from "./Pages/Home";
 import Navbar from "./Components/Atoms/Navbar";
 import Footer from './Components/Atoms/Footer';
 import Category from './Pages/Category';
-import WaterClosets from './Pages/WaterClosets';
-import WaterBasins from './Pages/WashBasins';
-import WallHungs from './Pages/WallHungs';
-import ComboPacks from './Pages/ComboPacks';
-import BathTubs from './Pages/BathTubs';
-import UrinalandAcce from './Pages/UrinalandAcce';
+import WaterClosets from './Components/Atoms/WaterClosets';
+import WaterBasins from './Components/Atoms/WashBasins';
+import WallHungs from './Components/Atoms/WallHungs';
+import ComboPacks from './Components/Atoms/ComboPacks';
+import BathTubs from './Components/Atoms/BathTubs';
+import UrinalandAcce from './Components/Atoms/UrinalandAcce';
 import SeeAll from './Components/Atoms/SeeAll';
+import Products from './Pages/Products';
+import Favorites from './Pages/Favorites';
+import SearchPage from './Pages/SearchPage';
+
 
 function App() {
 
@@ -29,6 +33,9 @@ function App() {
           <Route path='/bath-tubs' element={<BathTubs />} />
           <Route path="/urinals-accessories" element={<UrinalandAcce />} />
           <Route path="/see-all" element={<SeeAll />} />
+          <Route path="/products" element={<Products/>} />
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/search" element={<SearchPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -35,10 +35,12 @@ function PopularProducts() {
 
   return (
     <>
-      {" "}
       <div className="flex justify-between bg-[#f7f7fc] lg:justify-center md:flex-col items-center p-4">
         <span className="font-medium md:text-2xl">Poupler Products</span>
-        <a href="/see-all" className="text-xs text-blue-500 font-medium md:text-base">
+        <a
+          href="/see-all"
+          className="text-xs text-blue-500 font-medium md:text-base"
+        >
           See All
         </a>
       </div>
@@ -59,9 +61,9 @@ function PopularProducts() {
                   alt={product.name}
                   className="w-full h-full object-cover rounded-lg"
                 />
-                <button className="absolute -top-2 -right-2 bg-[#f7f7fc] rounded-full shadow">
+                <div className="absolute -top-2 -right-2 bg-[#f7f7fc] rounded-full">
                   <FavoriteIcon />
-                </button>
+                </div>
               </div>
               <h3 className="text-sm font-medium mt-2 text-center md:text-lg">
                 {product.name}

@@ -1,26 +1,58 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CategorySearch from "./CategorySearch";
 import FavoriteIcon from "./FavoriteIcon";
 
 function WaterClosets() {
+  const [favorites, setFavorites] = useState([]);
+  const [searchQuery, setSearchQuery] = useState(""); // Search state
+
+  useEffect(() => {
+    const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    setFavorites(savedFavorites);
+  }, []);
+
+  useEffect(() => {
+    const syncFavorites = () => {
+      setFavorites(JSON.parse(localStorage.getItem("favorites")) || []);
+    };
+
+    window.addEventListener("favoritesUpdated", syncFavorites);
+    return () => window.removeEventListener("favoritesUpdated", syncFavorites);
+  }, []);
+
+  const toggleFavorite = (product) => {
+    let updatedFavorites;
+    const isFavorite = favorites.some((fav) => fav.id === product.id);
+
+    if (isFavorite) {
+      updatedFavorites = favorites.filter((fav) => fav.id !== product.id);
+    } else {
+      updatedFavorites = [...favorites, product];
+    }
+
+    setFavorites(updatedFavorites);
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+    window.dispatchEvent(new Event("favoritesUpdated"));
+  };
+
   const products = [
     {
       id: 1,
-      name: "Ceramic Floor-Mounted European Water Closet with Soft Close Hydraulic Seat Cover and Flush Tank, White One Piece",
+      name: "Ceramic Floor-Mounted European Water Closet",
       price: "₹ 7,999.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/close_4_4e299bd6-d8eb-4531-92db-036bf5103001.png?v=1729687653&width=493",
     },
     {
       id: 2,
-      name: "Ceramic One Piece Western Toilet Commode - European Commode Water Closet With Soft Close Seat Cover ",
+      name: "Ceramic One Piece Western Toilet Commode",
       price: "₹ 11,760.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/61In0Kiq2UL._SL1500_37e9eb02-cc1a-4883-a6c8-7e73421f7504.jpg?v=1737609741&width=493",
     },
     {
       id: 3,
-      name: "Ceramic P-Trap Floor Mounted European Water Closet | Contemporary Western Toilet | 67x37x74 cm | White OPT050",
+      name: "Ceramic P-Trap Floor Mounted European Water Closet | Contemporary Western Toilet",
       price: "₹ 6,990.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/01_-_Copy_8a5e7916-d35d-4382-98c4-ca7fbab2dea0.jpg?v=1727180267&width=493",
@@ -117,34 +149,53 @@ function WaterClosets() {
         "https://www.inart.co.in/cdn/shop/files/1_dd37549a-9205-412b-a09d-a2247cf66a61.png?v=1712033060&width=493",
     },
   ];
+
+  // Filter products based on search query
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div className="w-full lg:px-10 flex flex-col gap-4 bg-[#f7f7fc]">
-      <CategorySearch />
+      <CategorySearch
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+      />
       <span className="flex justify-center items-center text-lg lg:text-2xl font-medium">
         Water Closets
       </span>
       <div className="p-4 mb-14 flex justify-center items-center">
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
-          {products.map((product) => (
-            <div
-              key={product.id}
-              className=" rounded-xl text-center flex flex-col items-center"
-            >
-              <div className="relative w-full h-40 lg:h-72">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover rounded-md"
-                />
-                <div className="absolute -top-2 -right-2 bg-[#f7f7fc] rounded-full">
-                  <FavoriteIcon />
+        {filteredProducts.length > 0 ? (
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {filteredProducts.map((product) => {
+              const isFavorite = favorites.some((fav) => fav.id === product.id);
+              return (
+                <div
+                  key={product.id}
+                  className="rounded-xl text-center flex flex-col items-center"
+                >
+                  <div className="relative w-full h-40 lg:h-72">
+                    <img
+                      src={product.image.startsWith("https") ? product.image : `https:${product.image}`}
+                      alt={product.name}
+                      className="w-full h-full object-cover rounded-md"
+                    />
+                    <div className="absolute -top-2 -right-2 bg-[#f7f7fc] rounded-full cursor-pointer">
+                      <FavoriteIcon
+                        isActive={isFavorite}
+                        onToggle={() => toggleFavorite(product)}
+                      />
+                    </div>
+                  </div>
+                  <h3 className="text-sm font-medium mt-2">{product.name}</h3>
+                  <p className="text-gray-600 mt-1">{product.price}</p>
                 </div>
-              </div>
-              <h3 className="text-sm font-medium mt-2">{product.name}</h3>
-              <p className="text-gray-600 mt-1">{product.price}</p>
-            </div>
-          ))}
-        </div>
+              );
+            })}
+          </div>
+        ) : (
+          <p className="text-center text-gray-600">No products found</p>
+        )}
       </div>
     </div>
   );

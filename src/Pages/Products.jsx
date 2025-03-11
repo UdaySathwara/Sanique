@@ -1,9 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Components/Atoms/Navbar";
-import ScrollNav from "../Components/Atoms/ScrollNav";
 
-function Category() {
+function Products() {
   const navigate = useNavigate();
 
   const category = [
@@ -23,7 +22,7 @@ function Category() {
     },
     {
       name: "Wall Hungs",
-      image: "https://www.inart.co.in/cdn/shop/files/Untitled-2-fotor-20240122103459.png?v=1708575421&width=1100",
+      image: "https://www.inart.co.in/cdn/shop/files/4-fotor-2024012012735.png?v=1708513953&width=493",
       products: 17,
       path: "/wall-hungs",
     },
@@ -34,14 +33,8 @@ function Category() {
       path: "/combo-packs",
     },
     {
-      name: "Bath Tubs",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmC_RNPbuR7ec8EDcdKi_bD8NVx33bz2x8GByz30kwJ2Ras0cW3epcTcHg&s=100",
-      products: 24,
-      path: "/bath-tubs",
-    },
-    {
-      name: "Urinals and Accessories",
-      image: "https://www.cleanlink.com/resources/editorial/2019/24151-urinals.jpg",
+      name: "Accessories",
+      image: "https://www.queobathrooms.com/QueoBathroomImages/BlogImage/a-comprehensive-guide-to-washbasin-sizes.jpg",
       products: 32,
       path: "/urinals-accessories",
     },
@@ -49,23 +42,22 @@ function Category() {
 
   return (
     <div className="bg-[#f7f7fc] pb-14 w-full flex flex-col gap-4 min-h-screen">
-      <Navbar />
-      <ScrollNav />
+        <Navbar />
+      <div>
+        <h1 className="text-2xl font-medium text-center pb-2 lg:text-3xl">Products</h1>
+      </div>
       <div className="flex pb-2 px-3 md:px-10 flex-col gap-2 lg:gap-7 lg:grid lg:grid-cols-2 lg:px-20">
         {category.map((item, index) => (
           <div key={index} className="relative w-full h-full cursor-pointer" onClick={() => navigate(item.path)}>
             <img
               src={item.image}
               alt="Sanitary Ware"
-              className="w-full h-32 rounded-2xl object-cover lg:h-40"
+              className="w-full h-52 rounded-2xl object-cover lg:h-40"
             />
             <div
-              className={`absolute inset-0 flex flex-col justify-center p-8  bg-black bg-opacity-40 rounded-2xl ${
-                index % 2 === 0 ? "items-start" : "items-end"
-              }`}
-            >
-              <p className="text-xl font-bold text-gray-200">{item.name}</p>
-              <span className="text-xs font-medium text-black">{item.products} Products</span>
+              className="absolute inset-0 flex flex-col justify-end p-4 items-center bg-black bg-opacity-30 rounded-2xl text-black">
+              <p className="text-xl font-bold ">{item.name}</p>
+              <span className="text-xs font-medium ">{item.products} Products</span>
             </div>
           </div>
         ))}
@@ -74,4 +66,4 @@ function Category() {
   );
 }
 
-export default Category;
+export default Products;
