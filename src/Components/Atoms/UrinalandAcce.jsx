@@ -1,6 +1,6 @@
 import React from "react";
-import CategorySearch from "../Components/Atoms/CategorySearch";
-import FavoriteIcon from "../Components/Atoms/FavoriteIcon";
+import CategorySearch from "./CategorySearch";
+import FavoriteIcon from "./FavoriteIcon";
 
 function UrinalandAcce() {
   const products = [
