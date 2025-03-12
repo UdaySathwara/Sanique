@@ -6,11 +6,8 @@ function CategorySearch({ searchQuery, setSearchQuery }) {
 
   return (
     <div className="flex justify-center items-center m-2">
-      <span
-        className="material-symbols-outlined flex justify-center items-center cursor-pointer"
-        onClick={() => navigate(-1)}
-      >
-        arrow_back
+      <span className="material-symbols-outlined ml-2" onClick={() => navigate(-1)}>
+        arrow_back_ios
       </span>
       <div className="flex items-center justify-center gap-3 p-3 border border-blue-500 rounded-xl w-full  lg:max-w-2xl lg:mx-auto m-3">
         {/* Search Icon */}

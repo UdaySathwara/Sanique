@@ -15,7 +15,14 @@ import SeeAll from './Components/Atoms/SeeAll';
 import Products from './Pages/Products';
 import Favorites from './Pages/Favorites';
 import SearchPage from './Pages/SearchPage';
-
+import Notificattion from './Pages/Notification';
+import Profile from './Pages/Profile';
+import EditProfile from './Components/Atoms/Editprofile';
+import PrivacyPolicy from './Components/Atoms/PrivacyPolicy';
+import HelpandSupport from './Components/Atoms/HelpandSupport';
+import ChangePassword from './Components/Atoms/ChangePassword';
+import NotificattionSettings from './Components/Atoms/NotificationSettings';
+import Language from '../src/Components/Language';
 
 function App() {
 
@@ -36,6 +43,14 @@ function App() {
           <Route path="/products" element={<Products/>} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/search" element={<SearchPage />} />
+          <Route path='/notifications' element={<Notificattion />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/edit-profile" element={<EditProfile />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/help-support" element={<HelpandSupport />} />
+          <Route path="/change-password" element={<ChangePassword />} />
+          <Route path='/notification-settings' element={<NotificattionSettings />} />
+          <Route path="/change-language" element={<Language />} />
         </Routes>
         <Footer />
       </BrowserRouter>

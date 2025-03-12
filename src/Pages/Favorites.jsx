@@ -32,7 +32,7 @@ export default function FavoritesPage() {
       <h2 className="text-xl font-medium flex justify-center items-center">My Favorites</h2>
       {favorites.length === 0 ? (
         <p className="text-gray-600 text-center">No favorites yet!</p>
-      ) : (
+      ) : (```````````````````````````
         <div className="p-4 flex justify-center items-center">
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {favorites.map((product) => (

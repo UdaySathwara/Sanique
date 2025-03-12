@@ -153,21 +153,22 @@ const SearchPage = () => {
   return (
     <div className="p-4 w-full min-h-screen bg-[#f7f7fc] mb-14">
       {/* Search Bar */}
-      <form
-        className="flex items-center gap-2 border border-blue-500 rounded-2xl px-4 py-2"
-        onSubmit={handleSearchSubmit}
-      >
-        <ArrowLeft className="w-5 h-5 text-gray-500" />
-        <Search className="w-5 h-5 text-gray-500" />
-        <input
-          type="text"
-          placeholder="Search"
-          value={searchQuery}
-          onChange={handleSearchChange}
-          className="flex-1 outline-none text-sm bg-transparent p-1"
-        />
-      </form>
-
+      <div className="flex items-center gap-4 py-2">
+        <span class="material-symbols-outlined cursor-pointer ml-2" onClick={() => navigate(-1)}>arrow_back_ios</span>
+        <form
+          className="flex items-center gap-2 border border-blue-500 rounded-2xl px-4 py-2 w-full"
+          onSubmit={handleSearchSubmit}
+        >
+          <Search className="w-5 h-5 text-gray-500" />
+          <input
+            type="text"
+            placeholder="Search...."
+            value={searchQuery}
+            onChange={handleSearchChange}
+            className="flex-1 outline-none text-sm bg-transparent p-1"
+          />
+        </form>
+      </div>
       {/* Last Search */}
       <div className="mt-4">
         <div className="flex justify-between items-center">
@@ -252,7 +253,9 @@ const SearchPage = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-medium text-sm">{product.name}</h3>
-                  <p className="text-xs text-gray-500">{product.searches} Search Today</p>
+                  <p className="text-xs text-gray-500">
+                    {product.searches} Search Today
+                  </p>
                 </div>
               </div>
             ))}
