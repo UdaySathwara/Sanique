@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import CategorySearch from "./CategorySearch";
 import FavoriteIcon from "./FavoriteIcon";
 
 function WaterClosets() {
   const [favorites, setFavorites] = useState([]);
   const [searchQuery, setSearchQuery] = useState(""); // Search state
+  const navigate = useNavigate();
 
   useEffect(() => {
     const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
@@ -42,6 +44,7 @@ function WaterClosets() {
       price: "₹ 7,999.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/close_4_4e299bd6-d8eb-4531-92db-036bf5103001.png?v=1729687653&width=493",
+      path: "/detail-water-closet",
     },
     {
       id: 2,
@@ -49,6 +52,7 @@ function WaterClosets() {
       price: "₹ 11,760.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/61In0Kiq2UL._SL1500_37e9eb02-cc1a-4883-a6c8-7e73421f7504.jpg?v=1737609741&width=493",
+      path: "/detail-water-closet",
     },
     {
       id: 3,
@@ -56,6 +60,7 @@ function WaterClosets() {
       price: "₹ 6,990.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/01_-_Copy_8a5e7916-d35d-4382-98c4-ca7fbab2dea0.jpg?v=1727180267&width=493",
+        path: "/detail-water-closet",
     },
     {
       id: 4,
@@ -63,6 +68,7 @@ function WaterClosets() {
       price: "₹ 11,750.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/S9e1a3fa44595422dbb5e7ddc7b0afa36o.jpg_960x960_97e2d6a5-abca-412c-ba32-8b8d072a67de.webp?v=1722490383&width=493",
+        path: "/detail-water-closet",
     },
     {
       id: 5,
@@ -70,6 +76,7 @@ function WaterClosets() {
       price: "₹ 14,299.00",
       image:
         "https://www.inart.co.in/cdn/shop/products/71tIgHNUPSL.jpg?v=1704092471&width=493",
+        path: "/detail-water-closet",
     },
     {
       id: 6,
@@ -77,6 +84,7 @@ function WaterClosets() {
       price: "₹ 6,970.00",
       image:
         "https://www.inart.co.in/cdn/shop/products/51z46y8zQaL._SL1256.jpg?v=1665142207&width=493",
+        path: "/detail-water-closet",
     },
     {
       id: 7,
@@ -84,6 +92,7 @@ function WaterClosets() {
       price: "₹ 7,990.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/untitled_41bc96d5-6936-46c3-acdd-676ccce04e43.png?v=1728972697&width=493",
+        path: "/detail-water-closet",
     },
     {
       id: 8,
@@ -91,6 +100,7 @@ function WaterClosets() {
       price: "₹ 8,499.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/01-Copy_cccf1572-562a-4729-822d-f4e07f1fbc9e.jpg?v=1727179129&width=493",
+        path: "/detail-water-closet",
     },
     {
       id: 9,
@@ -98,6 +108,7 @@ function WaterClosets() {
       price: "₹ 9,999.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/41NFus0Gd_L._SL1300_dce92f8b-0907-405d-87ad-c1de4a69aed3.jpg?v=1683094915&width=493",
+        path: "/detail-water-closet",
     },
     {
       id: 10,
@@ -105,6 +116,7 @@ function WaterClosets() {
       price: "₹ 8,999.00",
       image:
         "https://www.inart.co.in/cdn/shop/products/31FkMwfcdvL.jpg?v=1665142203&width=493",
+        path: "/detail-water-closet",
     },
     {
       id: 11,
@@ -112,6 +124,7 @@ function WaterClosets() {
       price: "₹ 12,799.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/01-Copy_d0bd47bb-748d-4fc5-9408-0e3023c8cd7e.jpg?v=1723290537&width=493",
+        path: "/detail-water-closet",
     },
     {
       id: 12,
@@ -119,6 +132,7 @@ function WaterClosets() {
       price: "₹ 12,799.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/01-Copy_80039876-4ecb-489f-a617-baebf77a3340.jpg?v=1723290511&width=493",
+        path: "/detail-water-closet",
     },
     {
       id: 13,
@@ -126,6 +140,7 @@ function WaterClosets() {
       price: "₹ 12,799.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/01-Copy_cea1e643-17e5-4ade-953d-512b9c2e39b5.jpg?v=1723290479&width=493",
+        path: "/detail-water-closet",
     },
     {
       id: 14,
@@ -133,6 +148,7 @@ function WaterClosets() {
       price: "₹ 12,799.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/01-Copy_7f25b84d-d9e5-49f0-9fa8-625ace61d52c.jpg?v=1723290429&width=493",
+        path: "/detail-water-closet",
     },
     {
       id: 15,
@@ -140,6 +156,7 @@ function WaterClosets() {
       price: "₹ 17,990.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/2_0cabb7eb-3695-41f4-95a0-afad0090cc6e.png?v=1720452341&width=493",
+        path: "/detail-water-closet",
     },
     {
       id: 16,
@@ -147,6 +164,7 @@ function WaterClosets() {
       price: "₹ 19,970.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/1_dd37549a-9205-412b-a09d-a2247cf66a61.png?v=1712033060&width=493",
+        path: "/detail-water-closet",
     },
   ];
 
@@ -172,18 +190,26 @@ function WaterClosets() {
               return (
                 <div
                   key={product.id}
-                  className="rounded-xl text-center flex flex-col items-center"
+                  className="rounded-xl text-center flex flex-col items-center cursor-pointer"
+                  onClick={() => navigate(product.path)}
                 >
                   <div className="relative w-full h-40 lg:h-72">
                     <img
-                      src={product.image.startsWith("https") ? product.image : `https:${product.image}`}
+                      src={
+                        product.image.startsWith("https")
+                          ? product.image
+                          : `https:${product.image}`
+                      }
                       alt={product.name}
                       className="w-full h-full object-cover rounded-md"
                     />
                     <div className="absolute -top-2 -right-2 bg-[#f7f7fc] rounded-full cursor-pointer">
                       <FavoriteIcon
                         isActive={isFavorite}
-                        onToggle={() => toggleFavorite(product)}
+                        onToggle={(e) => {
+                          e.stopPropagation();
+                          toggleFavorite(product);
+                        }}
                       />
                     </div>
                   </div>

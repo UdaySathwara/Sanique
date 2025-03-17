@@ -22,7 +22,10 @@ import PrivacyPolicy from './Components/Atoms/PrivacyPolicy';
 import HelpandSupport from './Components/Atoms/HelpandSupport';
 import ChangePassword from './Components/Atoms/ChangePassword';
 import NotificattionSettings from './Components/Atoms/NotificationSettings';
-import Language from '../src/Components/Language';
+import Language from './Components/Atoms/Language';
+import DetailWaterClosets from './Components/Atoms/DetailWaterClosets';
+import DetailWashBasin from './Components/Atoms/DetailWashbasin';
+import DetailWallHungs from './Components/Atoms/DetailWallHungs';
 
 function App() {
 
@@ -51,6 +54,9 @@ function App() {
           <Route path="/change-password" element={<ChangePassword />} />
           <Route path='/notification-settings' element={<NotificattionSettings />} />
           <Route path="/change-language" element={<Language />} />
+          <Route path="/detail-water-closet" element={<DetailWaterClosets />} />
+          <Route path="/detail-wash-basin" element={<DetailWashBasin />} />
+          <Route path="/detail-wall-hungs" element={<DetailWallHungs />} />
         </Routes>
         <Footer />
       </BrowserRouter>
@@ -59,3 +65,4 @@ function App() {
 }
 
 export default App;
+

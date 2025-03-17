@@ -29,7 +29,7 @@ function PopularProducts() {
     {
       id: 602,
       name: "Brass Bathroom Floor Water Drain with Trap",
-      price: "₹ 20,000*",
+      price: "₹ 20,000.00",
       image:
         "https://www.inart.co.in/cdn/shop/products/H27ebd8c69e9a40669f05cb6f69e6a0e0j.jpg?v=1665134886&width=493",
     },
@@ -104,7 +104,7 @@ function PopularProducts() {
                 <h3 className="text-sm font-medium mt-2 md:text-lg">
                   {product.name}
                 </h3>
-                <p className="text-gray-600 text-sm md:text-lg">
+                <p className="text-gray-600 text-sm md:text-sm">
                   {product.price}
                 </p>
               </div>
