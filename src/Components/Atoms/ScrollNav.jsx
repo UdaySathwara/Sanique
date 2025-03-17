@@ -14,7 +14,7 @@ const ScrollNav = () => {
       >
         Home
         {location.pathname === "/" && (
-          <div className="w-16 h-1 bg-[#8686fc] mt-1 rounded-full"></div>
+          <div className="w-20 h-1 bg-[#8686fc] mt-1 rounded-full"></div>
         )}
       </button>
 
@@ -26,7 +26,7 @@ const ScrollNav = () => {
       >
         Category
         {location.pathname === "/category" && (
-          <div className="w-16 h-1 bg-[#8686fc] mt-1 rounded-full"></div>
+          <div className="w-20 h-1 bg-[#8686fc] mt-1 rounded-full"></div>
         )}
       </button>
     </div>

@@ -48,10 +48,10 @@ function Category() {
   ];
 
   return (
-    <div className="bg-[#f7f7fc] pb-14 w-full flex flex-col gap-4 min-h-screen">
+    <div className="bg-[#f7f7fc] pb-14 w-full flex flex-col min-h-screen">
       <Navbar />
       <ScrollNav />
-      <div className="flex pb-2 px-3 md:px-10 flex-col gap-2 lg:gap-7 lg:grid lg:grid-cols-2 lg:px-20">
+      <div className="flex pb-2 px-3 md:px-10 flex-col gap-2 lg:gap-7 lg:grid lg:grid-cols-2 lg:px-20 mt-2">
         {category.map((item, index) => (
           <div key={index} className="relative w-full h-full cursor-pointer" onClick={() => navigate(item.path)}>
             <img

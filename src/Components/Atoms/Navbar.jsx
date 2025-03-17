@@ -16,9 +16,11 @@ function Navbar() {
 
   return (
     <div className="relative">
-      <div className="flex justify-between items-center bg-[#f7f7fc] p-3 lg:px-5">
+      <div className="flex justify-between items-center bg-[#f7f7fc] p-3 lg:px-5 border-b-2">
         <h1 className="text-2xl font-bold">
-          <span className="text-[#2c6fff]">Moon</span>Sea
+          <img src="https://www.mooncera.com/admin/upload/gallery/product_02-11-23-11-37-48-am_moon%20profile-01.png" alt="logo" 
+          className="w-32 h-8 ml-2  mix-blend-multiply bg-[#f7f7fc]"
+          onClick={() => navigate("/")}/>
         </h1>
         <div className="flex gap-3 p-2">
           <button onClick={handleSearchClick} className="relative">

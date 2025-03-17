@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-const ProductDetail = () => {
+const DetailMirror = () => {
   const navigate = useNavigate();
   const [selectedColor, setSelectedColor] = useState("White");
 
   const images = {
     White:
-      "https://www.ivas.homes/images/products/sanitaryware/water-closets/one-piece-closet/leandra-white-IM10060383.webp",
-    Black:
-      "https://www.ivas.homes/images/products/sanitaryware/midnight-collection/midnight-glossy/leandra-glossy.webp",
-    Mocha:
-      "https://www.ivas.homes/images/products/sanitaryware/water-closets/one-piece-closet/leandra-glossy-IM10039053.webp",
-    Grey: "https://www.ivas.homes/images/products/sanitaryware/water-closets/one-piece-closet/leandra-glossy-IM10039054.webp",
+      "https://www.elitebathroomware.co.nz/cdn/shop/products/IMG_0627FOcopy.jpg?v=1741719781",
+    Blue:
+      "https://shop.babaglass.net/wp-content/uploads/2024/09/55.jpg",
+    Pink:
+      "https://ledmirror.in/wp-content/uploads/2021/06/Hccad1571d681477595fa045068762bd1O.jpg",
+    Gold: "https://down-ph.img.susercontent.com/file/cn-11134207-7r98o-lsnwexdu0crx42_tn",
   };
 
   return (
@@ -46,11 +46,11 @@ const ProductDetail = () => {
         <div className="relative w-full bg-[#f7f7fc] p-4 rounded-t-lg z-10">
           <div className="mt-2">
             <h3 className="text-lg font-medium text-gray-700">
-            Premium Water Closet - Western Commode with Durable Seat - {selectedColor}
+            Smart LED Mirror with Anti-Fog Feature - {selectedColor}
             </h3>
             <div className="flex items-center text-yellow-500">
               <FaStar /> <FaStar /> <FaStar /> <FaStar /> <FaStarHalfAlt />
-              <span className="text-gray-500 ml-2">(121 Reviews)</span>
+              <span className="text-gray-500 ml-2">(69 Reviews)</span>
             </div>
           </div>
 
@@ -68,26 +68,26 @@ const ProductDetail = () => {
               </div>
               <div
                 className={`w-6 h-6 rounded-full cursor-pointer ${
-                  selectedColor === "Black" ? "ring-2 ring-gray-500" : ""
+                  selectedColor === "Blue" ? "ring-2 ring-gray-500" : ""
                 }`}
-                style={{ backgroundColor: "Black" }}
-                onClick={() => setSelectedColor("Black")}
+                style={{ backgroundColor: "Blue" }}
+                onClick={() => setSelectedColor("Blue")}
               ></div>
 
               <div
                 className={`w-6 h-6 rounded-full cursor-pointer ${
-                  selectedColor === "Mocha" ? "ring-2 ring-gray-500" : ""
+                  selectedColor === "Pink" ? "ring-2 ring-gray-500" : ""
                 }`}
-                style={{ backgroundColor: "#C19A6B", border: "1px solid gray" }}
-                onClick={() => setSelectedColor("Mocha")}
+                style={{ backgroundColor: "Pink", border: "1px solid gray" }}
+                onClick={() => setSelectedColor("Pink")}
               ></div>
 
               <div
                 className={`w-6 h-6 rounded-full cursor-pointer ${
-                  selectedColor === "Grey" ? "ring-2 ring-gray-500" : ""
+                  selectedColor === "Gold" ? "ring-2 ring-gray-500" : ""
                 }`}
-                style={{ backgroundColor: "Grey" }}
-                onClick={() => setSelectedColor("Grey")}
+                style={{ backgroundColor: "Gold" }}
+                onClick={() => setSelectedColor("Gold")}
               ></div>
             </div>
           </div>
@@ -95,20 +95,14 @@ const ProductDetail = () => {
           <div className="mt-2">
             <h4 className="text-md font-medium text-gray-700">Description</h4>
             <p className="text-gray-600 mt-2 text-sm lg:text-base">
-              This is a modern one-piece toilet with a sleek, minimalist design.
-              It features a smooth, seamless construction that enhances both
-              aesthetics and hygiene by preventing dirt buildup. The compact
-              structure makes it ideal for contemporary bathrooms, while the
-              dual-flush system ensures water efficiency.
+            Enhance your bathroom with our Premium LED Mirror Collection. Designed for both style and functionality, our LED mirrors feature sleek, modern designs with high-quality finishes in White, Black, Pink, and Gold. Crafted with durable, easy-to-clean materials, these mirrors provide superior illumination, elegant aesthetics, and long-lasting performance.
             </p>
           </div>
         </div>
-
-        {/* Spacer to push content down */}
         <div className="mb-14"></div>
       </div>
     </div>
   );
 };
 
-export default ProductDetail;
+export default DetailMirror;

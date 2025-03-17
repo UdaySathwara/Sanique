@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-const ProductDetail = () => {
+const DetailShower = () => {
   const navigate = useNavigate();
   const [selectedColor, setSelectedColor] = useState("White");
 
   const images = {
     White:
-      "https://www.ivas.homes/images/products/sanitaryware/water-closets/one-piece-closet/leandra-white-IM10060383.webp",
+      "https://www.ivas.homes/images/products/bath-fittings/bath-accessories/full-brass-9912-series/robe-hook-chrome.webp",
     Black:
-      "https://www.ivas.homes/images/products/sanitaryware/midnight-collection/midnight-glossy/leandra-glossy.webp",
+      "https://www.ivas.homes/images/products/bath-fittings/bath-accessories/full-brass-9912-series/robe-hook-black.webp",
     Mocha:
-      "https://www.ivas.homes/images/products/sanitaryware/water-closets/one-piece-closet/leandra-glossy-IM10039053.webp",
-    Grey: "https://www.ivas.homes/images/products/sanitaryware/water-closets/one-piece-closet/leandra-glossy-IM10039054.webp",
+      "https://www.ivas.homes/images/products/bath-fittings/bath-accessories/full-brass-9912-series/robe-hook-rose-gold.webp",
+    Gold: "https://www.ivas.homes/images/products/bath-fittings/bath-accessories/full-brass-9912-series/robe-hook-gold.webp",
   };
 
   return (
@@ -46,11 +46,11 @@ const ProductDetail = () => {
         <div className="relative w-full bg-[#f7f7fc] p-4 rounded-t-lg z-10">
           <div className="mt-2">
             <h3 className="text-lg font-medium text-gray-700">
-            Premium Water Closet - Western Commode with Durable Seat - {selectedColor}
+                Robe Hook - {selectedColor}
             </h3>
             <div className="flex items-center text-yellow-500">
               <FaStar /> <FaStar /> <FaStar /> <FaStar /> <FaStarHalfAlt />
-              <span className="text-gray-500 ml-2">(121 Reviews)</span>
+              <span className="text-gray-500 ml-2">(75 Reviews)</span>
             </div>
           </div>
 
@@ -84,10 +84,10 @@ const ProductDetail = () => {
 
               <div
                 className={`w-6 h-6 rounded-full cursor-pointer ${
-                  selectedColor === "Grey" ? "ring-2 ring-gray-500" : ""
+                  selectedColor === "Gold" ? "ring-2 ring-gray-500" : ""
                 }`}
-                style={{ backgroundColor: "Grey" }}
-                onClick={() => setSelectedColor("Grey")}
+                style={{ backgroundColor: "Gold" }}
+                onClick={() => setSelectedColor("Gold")}
               ></div>
             </div>
           </div>
@@ -95,20 +95,14 @@ const ProductDetail = () => {
           <div className="mt-2">
             <h4 className="text-md font-medium text-gray-700">Description</h4>
             <p className="text-gray-600 mt-2 text-sm lg:text-base">
-              This is a modern one-piece toilet with a sleek, minimalist design.
-              It features a smooth, seamless construction that enhances both
-              aesthetics and hygiene by preventing dirt buildup. The compact
-              structure makes it ideal for contemporary bathrooms, while the
-              dual-flush system ensures water efficiency.
+            Enhance your space with our Premium Hook Collection. Designed for versatility and style, our hooks feature sleek, modern designs with high-quality finishes in White, Black, Mocha, and Gold. Crafted with durable, easy-to-clean materials, these hooks provide a secure hold, superior aesthetics, and long-lasting performance for any room in your home.
             </p>
           </div>
         </div>
-
-        {/* Spacer to push content down */}
         <div className="mb-14"></div>
       </div>
     </div>
   );
 };
 
-export default ProductDetail;
+export default DetailShower;

@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-const ProductDetail = () => {
+const DetailUrinal = () => {
   const navigate = useNavigate();
   const [selectedColor, setSelectedColor] = useState("White");
 
   const images = {
     White:
-      "https://www.ivas.homes/images/products/sanitaryware/water-closets/one-piece-closet/leandra-white-IM10060383.webp",
+      "https://www.ivas.homes/images/products/sanitaryware/urinals/jacopo-white.webp",
     Black:
-      "https://www.ivas.homes/images/products/sanitaryware/midnight-collection/midnight-glossy/leandra-glossy.webp",
+      "https://www.catalano.it/wp-content/uploads/2022/03/1OR64NS.png",
     Mocha:
-      "https://www.ivas.homes/images/products/sanitaryware/water-closets/one-piece-closet/leandra-glossy-IM10039053.webp",
-    Grey: "https://www.ivas.homes/images/products/sanitaryware/water-closets/one-piece-closet/leandra-glossy-IM10039054.webp",
+      "https://www.ivas.homes/images/products/sanitaryware/urinals/jacopo-mocha.webp",
+    Grey: "https://www.ivas.homes/images/products/sanitaryware/urinals/jacopo-shark-grey.webp",
   };
 
   return (
@@ -46,11 +46,11 @@ const ProductDetail = () => {
         <div className="relative w-full bg-[#f7f7fc] p-4 rounded-t-lg z-10">
           <div className="mt-2">
             <h3 className="text-lg font-medium text-gray-700">
-            Premium Water Closet - Western Commode with Durable Seat - {selectedColor}
+            Wall-Mounted Ceramic Urinal - {selectedColor}
             </h3>
             <div className="flex items-center text-yellow-500">
               <FaStar /> <FaStar /> <FaStar /> <FaStar /> <FaStarHalfAlt />
-              <span className="text-gray-500 ml-2">(121 Reviews)</span>
+              <span className="text-gray-500 ml-2">(44 Reviews)</span>
             </div>
           </div>
 
@@ -95,20 +95,14 @@ const ProductDetail = () => {
           <div className="mt-2">
             <h4 className="text-md font-medium text-gray-700">Description</h4>
             <p className="text-gray-600 mt-2 text-sm lg:text-base">
-              This is a modern one-piece toilet with a sleek, minimalist design.
-              It features a smooth, seamless construction that enhances both
-              aesthetics and hygiene by preventing dirt buildup. The compact
-              structure makes it ideal for contemporary bathrooms, while the
-              dual-flush system ensures water efficiency.
+            Transform your restroom into a space of sophistication with our Premium Urinal Collection. Designed for both style and functionality, our urinals feature sleek, wall-mounted designs with high-quality finishes in White, Black, Mocha, and Shark Grey. Crafted with durable, easy-to-clean surfaces, these urinals offer superior aesthetics and long-lasting performance.
             </p>
           </div>
         </div>
-
-        {/* Spacer to push content down */}
         <div className="mb-14"></div>
       </div>
     </div>
   );
 };
 
-export default ProductDetail;
+export default DetailUrinal;

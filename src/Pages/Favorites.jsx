@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import FavoriteIcon from "../Components/Atoms/FavoriteIcon";
 import CategorySearch from "../Components/Atoms/CategorySearch";
 
 export default function FavoritesPage() {
   const [favorites, setFavorites] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    setFavorites(storedFavorites);
+    setFavorites(JSON.parse(localStorage.getItem("favorites")) || []);
 
     const handleFavoritesUpdate = () => {
       setFavorites(JSON.parse(localStorage.getItem("favorites")) || []);
@@ -20,7 +21,7 @@ export default function FavoritesPage() {
   }, []);
 
   const toggleFavorite = (product) => {
-    const updatedFavorites = favorites.filter((fav) => fav.name !== product.name);
+    const updatedFavorites = favorites.filter((fav) => fav.id !== product.id);
     setFavorites(updatedFavorites);
     localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
     window.dispatchEvent(new Event("favoritesUpdated"));
@@ -36,11 +37,21 @@ export default function FavoritesPage() {
         <div className="p-4 flex justify-center items-center">
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {favorites.map((product) => (
-              <div key={product.name} className="rounded-xl text-center flex flex-col items-center">
+              <div
+                key={product.id}
+                className="rounded-xl text-center flex flex-col items-center cursor-pointer"
+                onClick={() => navigate(product.path)} // Navigate to the product page
+              >
                 <div className="relative w-full h-40 lg:h-72">
                   <img src={product.image} alt={product.name} className="w-full h-full object-cover rounded-md" />
-                  <div className="absolute -top-2 -right-2 bg-white rounded-full cursor-pointer">
-                    <FavoriteIcon isActive={true} onToggle={() => toggleFavorite(product)} />
+                  <div
+                    className="absolute -top-2 -right-2 bg-white rounded-full cursor-pointer"
+                    onClick={(e) => {
+                      e.stopPropagation(); // Prevent navigation when clicking the favorite icon
+                      toggleFavorite(product);
+                    }}
+                  >
+                    <FavoriteIcon isActive={true} />
                   </div>
                 </div>
                 <h3 className="text-sm font-medium mt-2">{product.name}</h3>
