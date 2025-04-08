@@ -3,7 +3,7 @@ import Navbar from "../Components/Atoms/Navbar";
 import ScrollNav from "../Components/Atoms/ScrollNav";
 import Carousel from "../Components/Atoms/Carousel";
 import NewArrival from "../Components/Atoms/NewArrival";
-import Populerproducts from "../Components/Atoms/Populerproducts";
+import Populerproducts from "../Components/Atoms/PopulerProducts";
 
 function Home() {
   const [showMobileOnlyPopup, setShowMobileOnlyPopup] = useState(false);
