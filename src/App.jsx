@@ -24,7 +24,7 @@ import ChangePassword from "./Components/Atoms/ChangePassword";
 import NotificattionSettings from "./Components/Atoms/NotificationSettings";
 import Language from "./Components/Atoms/Language";
 import DetailWaterClosets from "./Components/Atoms/DetailWaterClosets";
-import DetailWashBasin from "./Components/Atoms/DetailWashbasin";
+import DetailWashBasin from "./Components/Atoms/DetailWashBasin";
 import DetailWallHungs from "./Components/Atoms/DetailWallHungs";
 import DetailComboPacks from "./Components/Atoms/DetailComboPacks";
 import DetailBathTubs from "./Components/Atoms/DetailBathTubs";
