@@ -18,13 +18,11 @@ function Navbar() {
   return (
     <div className="relative">
       <div className="flex justify-between items-center bg-[#f7f7fc] p-3 lg:px-5 border-b-2">
-        <h1 className="text-2xl font-bold flex justify-center items-center">
-          <img
-            src={Logo}
-            alt="logo"
-            className="w-10 h-12 ml-2 bg-[#f7f7fc]"
-            onClick={() => navigate("/")}
-          />
+        <h1
+          className="text-2xl font-bold flex justify-center items-center hover:cursor-pointer"
+          onClick={() => navigate("/")}
+        >
+          <img src={Logo} alt="logo" className="w-10 h-12 ml-2 bg-[#f7f7fc]" />
           <div className="flex flex-col mt-4">
             <span className="text-[#7479ff] text-base font-medium uppercase">
               Sanique

@@ -204,7 +204,7 @@ function WashBasins() {
   );
 
   return (
-    <div className="w-full lg:px-10 flex flex-col gap-4 bg-[#f7f7fc]">
+    <div className="w-full lg:px-10 flex flex-col gap-4 bg-[#f7f7fc] h-screen">
       <CategorySearch searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <span className="flex justify-center items-center text-lg lg:text-2xl font-medium">
         Wash Basins
