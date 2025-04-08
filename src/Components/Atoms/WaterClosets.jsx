@@ -60,7 +60,7 @@ function WaterClosets() {
       price: "₹ 6,990.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/01_-_Copy_8a5e7916-d35d-4382-98c4-ca7fbab2dea0.jpg?v=1727180267&width=493",
-        path: "/detail-water-closet",
+      path: "/detail-water-closet",
     },
     {
       id: 4,
@@ -68,7 +68,7 @@ function WaterClosets() {
       price: "₹ 11,750.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/S9e1a3fa44595422dbb5e7ddc7b0afa36o.jpg_960x960_97e2d6a5-abca-412c-ba32-8b8d072a67de.webp?v=1722490383&width=493",
-        path: "/detail-water-closet",
+      path: "/detail-water-closet",
     },
     {
       id: 5,
@@ -76,7 +76,7 @@ function WaterClosets() {
       price: "₹ 14,299.00",
       image:
         "https://www.inart.co.in/cdn/shop/products/71tIgHNUPSL.jpg?v=1704092471&width=493",
-        path: "/detail-water-closet",
+      path: "/detail-water-closet",
     },
     {
       id: 6,
@@ -84,7 +84,7 @@ function WaterClosets() {
       price: "₹ 6,970.00",
       image:
         "https://www.inart.co.in/cdn/shop/products/51z46y8zQaL._SL1256.jpg?v=1665142207&width=493",
-        path: "/detail-water-closet",
+      path: "/detail-water-closet",
     },
     {
       id: 7,
@@ -92,7 +92,7 @@ function WaterClosets() {
       price: "₹ 7,990.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/untitled_41bc96d5-6936-46c3-acdd-676ccce04e43.png?v=1728972697&width=493",
-        path: "/detail-water-closet",
+      path: "/detail-water-closet",
     },
     {
       id: 8,
@@ -100,7 +100,7 @@ function WaterClosets() {
       price: "₹ 8,499.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/01-Copy_cccf1572-562a-4729-822d-f4e07f1fbc9e.jpg?v=1727179129&width=493",
-        path: "/detail-water-closet",
+      path: "/detail-water-closet",
     },
     {
       id: 9,
@@ -108,7 +108,7 @@ function WaterClosets() {
       price: "₹ 9,999.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/41NFus0Gd_L._SL1300_dce92f8b-0907-405d-87ad-c1de4a69aed3.jpg?v=1683094915&width=493",
-        path: "/detail-water-closet",
+      path: "/detail-water-closet",
     },
     {
       id: 10,
@@ -116,7 +116,7 @@ function WaterClosets() {
       price: "₹ 8,999.00",
       image:
         "https://www.inart.co.in/cdn/shop/products/31FkMwfcdvL.jpg?v=1665142203&width=493",
-        path: "/detail-water-closet",
+      path: "/detail-water-closet",
     },
     {
       id: 11,
@@ -124,7 +124,7 @@ function WaterClosets() {
       price: "₹ 12,799.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/01-Copy_d0bd47bb-748d-4fc5-9408-0e3023c8cd7e.jpg?v=1723290537&width=493",
-        path: "/detail-water-closet",
+      path: "/detail-water-closet",
     },
     {
       id: 12,
@@ -132,7 +132,7 @@ function WaterClosets() {
       price: "₹ 12,799.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/01-Copy_80039876-4ecb-489f-a617-baebf77a3340.jpg?v=1723290511&width=493",
-        path: "/detail-water-closet",
+      path: "/detail-water-closet",
     },
     {
       id: 13,
@@ -140,7 +140,7 @@ function WaterClosets() {
       price: "₹ 12,799.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/01-Copy_cea1e643-17e5-4ade-953d-512b9c2e39b5.jpg?v=1723290479&width=493",
-        path: "/detail-water-closet",
+      path: "/detail-water-closet",
     },
     {
       id: 14,
@@ -148,7 +148,7 @@ function WaterClosets() {
       price: "₹ 12,799.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/01-Copy_7f25b84d-d9e5-49f0-9fa8-625ace61d52c.jpg?v=1723290429&width=493",
-        path: "/detail-water-closet",
+      path: "/detail-water-closet",
     },
     {
       id: 15,
@@ -156,7 +156,7 @@ function WaterClosets() {
       price: "₹ 17,990.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/2_0cabb7eb-3695-41f4-95a0-afad0090cc6e.png?v=1720452341&width=493",
-        path: "/detail-water-closet",
+      path: "/detail-water-closet",
     },
     {
       id: 16,
@@ -164,7 +164,7 @@ function WaterClosets() {
       price: "₹ 19,970.00",
       image:
         "https://www.inart.co.in/cdn/shop/files/1_dd37549a-9205-412b-a09d-a2247cf66a61.png?v=1712033060&width=493",
-        path: "/detail-water-closet",
+      path: "/detail-water-closet",
     },
   ];
 
@@ -220,7 +220,26 @@ function WaterClosets() {
             })}
           </div>
         ) : (
-          <p className="text-center text-gray-600">No products found</p>
+          <div className="flex flex-col items-center justify-center mt-10 text-center px-4">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/9827/9827607.png"
+              alt="No favorites"
+              className="w-36 h-36 opacity-70 mb-4"
+            />
+            <h3 className="text-lg font-semibold text-gray-700 mb-2">
+              No products found
+            </h3>
+            <p className="text-gray-500 mb-4">
+              Try searching with a different keyword or go back to browse
+              products.
+            </p>
+            <button
+              onClick={() => navigate("/products")}
+              className="px-6 py-2 bg-blue-500/95 text-white rounded-lg shadow hover:bg-white hover:text-blue-500 border border-blue-500 hover:transition"
+            >
+              Explore Products
+            </button>
+          </div>
         )}
       </div>
     </div>

@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import MochaImg from "../../assets/imgCombo/mocha.png";
+import WhiteImg from "../../assets/imgCombo/white.png";
+import GreyImg from "../../assets/imgCombo/grey.png";
+import BlackImg from "../../assets/imgCombo/black.png";
 
 const DetailComboPacks = () => {
   const navigate = useNavigate();
@@ -8,12 +12,13 @@ const DetailComboPacks = () => {
 
   const images = {
     White:
-      "https://files.oaiusercontent.com/file-8zppvZuPVzFFAow2Daj4VN?se=2025-03-17T05%3A55%3A48Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D910123dc-bb08-42ca-8510-ce73e3ec446b.webp&sig=PeakNxp50h5K4pMgOkEryfdoJUEnYUg5qkuDKNCf15k%3D",
+      WhiteImg,
     Black:
-      "https://files.oaiusercontent.com/file-KRzEKDJDJjqHrih3ZVVeUu?se=2025-03-17T05%3A55%3A57Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D75570ad7-3ce8-43ad-9b2d-2a51c3a93675.webp&sig=o%2Bv5EpT73B1yiwNrFnzg8kfFv61dUIAQ6H9/4nS1N/k%3D",
+      BlackImg,
     Mocha:
-      "https://files.oaiusercontent.com/file-M7Fz5p43rTvPiMau12sSLd?se=2025-03-17T05%3A56%3A06Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dc5c42369-1cdb-4b1d-8e98-c09ffe104888.webp&sig=W8k9LFauEtE4vrQuior6P8NemVeVhTDbAchsitpMWgY%3D",
-    Grey: "https://files.oaiusercontent.com/file-7NspTGu2UhpFp3F8zBegWc?se=2025-03-17T05%3A56%3A16Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D976a5cbd-3eb4-4f98-983d-359e7039b992.webp&sig=reZ0oH5gKo3hEGmAlQUO9QuA5szHUfoilVnSH/oEcf0%3D",
+      MochaImg,
+    Grey: 
+      GreyImg,
   };
 
   return (

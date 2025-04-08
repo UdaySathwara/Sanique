@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import BlackImg from "../../assets/imgBathtub/black.png";
+import WhiteImg from "../../assets/imgBathtub/white.png";
+import GreyImg from "../../assets/imgBathtub/grey.png";
+import MochaImg from "../../assets/imgBathtub/mocha.png";
 
 const DetailBathTubs = () => {
   const navigate = useNavigate();
@@ -8,12 +12,13 @@ const DetailBathTubs = () => {
 
   const images = {
     White:
-      "https://files.oaiusercontent.com/file-BgtYibtXSQZzdRkcL78V6J?se=2025-03-17T05%3A53%3A48Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D3863d828-9fec-4c4b-8135-692291635242.webp&sig=IoPfLdvlBhR%2BZwp%2Bo16JvtogyCdB9DC3ghW75AlIuY4%3D",
+      WhiteImg,
     Black:
-      "https://files.oaiusercontent.com/file-L6VNRZfWPTj3ftNLhE3btj?se=2025-03-17T06%3A23%3A30Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D7f0cf2b2-9b20-4fe0-b11d-bba96022d98a.webp&sig=0An4V/fKUVhzfkHhks9B3jImEYBmX1ZIjgDr4WzDDP8%3D",
+      BlackImg,
     Mocha:
-      "https://files.oaiusercontent.com/file-6BXkoTdwgeA1zcC4S4u89P?se=2025-03-17T05%3A52%3A41Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D412f7510-447b-4a7a-b872-d0543b77407e.webp&sig=egltMcGvHj3fm2VHyWzG2bMmwmp5O1lF1iSGvfGxSzU%3D",
-    Grey: "https://files.oaiusercontent.com/file-LTNRpN8wV6tFrvBKZUHJDE?se=2025-03-17T05%3A52%3A50Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D9d518853-d3ee-4e6b-a06f-3289a33ea2c4.webp&sig=vUpSScJSEQriSD8Ln720ZMo/5PjdJ0TohXQ9/gUePZs%3D",
+      MochaImg,
+    Grey: 
+      GreyImg,
   };
 
   return (

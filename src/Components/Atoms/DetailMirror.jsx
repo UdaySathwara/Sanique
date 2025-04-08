@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import BlueImg from "../../assets/BlueLedMirror.png";
 
 const DetailMirror = () => {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ const DetailMirror = () => {
     White:
       "https://www.elitebathroomware.co.nz/cdn/shop/products/IMG_0627FOcopy.jpg?v=1741719781",
     Blue:
-      "https://shop.babaglass.net/wp-content/uploads/2024/09/55.jpg",
+      BlueImg,
     Pink:
       "https://ledmirror.in/wp-content/uploads/2021/06/Hccad1571d681477595fa045068762bd1O.jpg",
     Gold: "https://down-ph.img.susercontent.com/file/cn-11134207-7r98o-lsnwexdu0crx42_tn",

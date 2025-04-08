@@ -200,7 +200,25 @@ function BathTubs() {
             })}
           </div>
         ) : (
-          <p className="text-center text-gray-600">No products found</p>
+          <div className="flex flex-col items-center justify-center mt-10 text-center px-4">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/9827/9827607.png"
+            alt="No favorites"
+            className="w-36 h-36 opacity-70 mb-4"
+          />
+          <h3 className="text-lg font-semibold text-gray-700 mb-2">
+            No products found
+          </h3>
+          <p className="text-gray-500 mb-4">
+            Try searching with a different keyword or go back to browse products.
+          </p>
+          <button
+            onClick={() => navigate("/products")}
+            className="px-6 py-2 bg-blue-500/95 text-white rounded-lg shadow hover:bg-white hover:text-blue-500 border border-blue-500 hover:transition"
+          >
+            Explore Products
+          </button>
+        </div>
         )}
       </div>
     </div>
