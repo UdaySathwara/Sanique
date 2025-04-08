@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import NotificationPanel from "../../Pages/Notification";
+import Logo from "../../assets/icons8-dispenser-48.png";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -17,10 +18,21 @@ function Navbar() {
   return (
     <div className="relative">
       <div className="flex justify-between items-center bg-[#f7f7fc] p-3 lg:px-5 border-b-2">
-        <h1 className="text-2xl font-bold">
-          <img src="https://www.mooncera.com/admin/upload/gallery/product_02-11-23-11-37-48-am_moon%20profile-01.png" alt="logo" 
-          className="w-32 h-8 ml-2  mix-blend-multiply bg-[#f7f7fc]"
-          onClick={() => navigate("/")}/>
+        <h1 className="text-2xl font-bold flex justify-center items-center">
+          <img
+            src={Logo}
+            alt="logo"
+            className="w-10 h-12 ml-2 bg-[#f7f7fc]"
+            onClick={() => navigate("/")}
+          />
+          <div className="flex flex-col mt-4">
+            <span className="text-[#7479ff] text-base font-medium uppercase">
+              Sanique
+            </span>
+            <span className="text-black text-[10px] font-normal uppercase -mt-3">
+              Light up your bathroom
+            </span>
+          </div>
         </h1>
         <div className="flex gap-3 p-2">
           <button onClick={handleSearchClick} className="relative">
@@ -34,7 +46,10 @@ function Navbar() {
       </div>
 
       {/* Notification Panel */}
-      <NotificationPanel isOpen={isNotificationOpen} setIsOpen={setIsNotificationOpen} />
+      <NotificationPanel
+        isOpen={isNotificationOpen}
+        setIsOpen={setIsNotificationOpen}
+      />
     </div>
   );
 }
