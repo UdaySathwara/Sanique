@@ -154,7 +154,7 @@ function MenuItem({ icon, text, onClick }) {
         {icon}
         <span className="text-gray-800">{text}</span>
       </div>
-      <span>&gt;</span>
+      <span className="material-symbols-outlined text-gray-800/80">chevron_right</span>
     </div>
   );
 }

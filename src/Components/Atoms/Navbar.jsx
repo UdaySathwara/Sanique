@@ -17,7 +17,7 @@ function Navbar() {
 
   return (
     <div className="relative">
-      <div className="flex justify-between items-center bg-[#f7f7fc] p-3 lg:px-5 border-b-2">
+      <div className="flex justify-between items-center bg-[#f7f7fc] py-3 px-1 lg:px-5 border-b-2">
         <h1
           className="text-2xl font-bold flex justify-center items-center hover:cursor-pointer"
           onClick={() => navigate("/")}
