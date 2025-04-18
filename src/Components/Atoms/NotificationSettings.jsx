@@ -19,10 +19,10 @@ const NotificationSettings = () => {
   };
 
   return (
-    <div className="bg-[#f7f7fc] min-h-screen p-6">
+    <div className="bg-[#f7f7fc] min-h-screen p-4">
       <div className="flex items-center justify-center py-2 mb-4">
         <span
-          className="material-symbols-outlined left-6 fixed  cursor-pointer"
+          className="material-symbols-outlined left-6 fixed  cursor-pointer xl:hidden"
           onClick={() => navigate(-1)}>
           arrow_back_ios
         </span>

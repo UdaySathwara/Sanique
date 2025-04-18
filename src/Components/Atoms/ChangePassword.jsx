@@ -25,10 +25,10 @@ export default function ChangePassword() {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white min-h-screen px-6 pt-10 pb-20 text-gray-900 relative">
+    <div className="max-w-md mx-auto bg-white min-h-screen p-4 pb-20 text-gray-900 relative">
       {/* Header */}
       <div className="flex items-center py-2 mb-6 relative">
-        <span className="material-symbols-outlined cursor-pointer" onClick={() => navigate(-1)}>
+        <span className="material-symbols-outlined cursor-pointer absolute left-2 xl:hidden" onClick={() => navigate(-1)}>
           arrow_back_ios
         </span>
         <h2 className="text-xl font-semibold mx-auto">Change Password</h2>

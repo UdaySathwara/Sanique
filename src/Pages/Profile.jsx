@@ -18,8 +18,9 @@ export default function Profile() {
     <div className="w-full mx-auto bg-[#f7f7fc] min-h-screen p-4 relative mb-14">
       {/* Header */}
       <div className="flex items-center justify-between py-2 mb-4">
+        <span className="xl:block hidden xl:w-8"></span>
         <span
-          className="material-symbols-outlined ml-2 cursor-pointer"
+          className="material-symbols-outlined ml-2 cursor-pointer xl:hidden"
           onClick={() => navigate(-1)}
         >
           arrow_back_ios

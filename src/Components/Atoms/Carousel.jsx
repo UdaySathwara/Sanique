@@ -51,7 +51,7 @@ export default function Carousel() {
                 <p className="text-sm sm:text-base font-medium">{slide.text}</p>
                 <button
                   onClick={handleShopNowClick}
-                  className="mt-2 px-3 py-1 bg-[#8686fc] text-white rounded-lg text-xs lg:text-base"
+                  className="mt-2 px-3 py-1 bg-[#8686fc] text-white rounded-lg text-xs lg:text-base border border-[#8686fc] hover:bg-[#8686fc]/60 transition duration-300 ease-in-out"
                 >
                   Shop Now
                 </button>

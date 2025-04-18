@@ -31,7 +31,7 @@ const DetailWashBasin = () => {
         {/* Top Section with Back Button and Title */}
         <div className=" flex items-center text-black z-10 justify-center pt-4">
           <span
-            className="material-symbols-outlined text-xl cursor-pointer fixed top-4 left-4"
+            className="material-symbols-outlined text-xl cursor-pointer fixed xl:top-6 left-4 top-4 md:left-8 xl:hidden"
             onClick={() => navigate(-1)}
           >
             arrow_back_ios

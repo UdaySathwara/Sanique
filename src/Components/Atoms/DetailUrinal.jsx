@@ -9,8 +9,7 @@ const DetailUrinal = () => {
   const images = {
     White:
       "https://www.ivas.homes/images/products/sanitaryware/urinals/jacopo-white.webp",
-    Black:
-      "https://www.catalano.it/wp-content/uploads/2022/03/1OR64NS.png",
+    Black: "https://www.catalano.it/wp-content/uploads/2022/03/1OR64NS.png",
     Mocha:
       "https://www.ivas.homes/images/products/sanitaryware/urinals/jacopo-mocha.webp",
     Grey: "https://www.ivas.homes/images/products/sanitaryware/urinals/jacopo-shark-grey.webp",
@@ -31,12 +30,14 @@ const DetailUrinal = () => {
         {/* Top Section with Back Button and Title */}
         <div className=" flex items-center text-black z-10 justify-center pt-4">
           <span
-            className="material-symbols-outlined text-xl cursor-pointer fixed top-4 left-4"
+            className="material-symbols-outlined text-xl cursor-pointer fixed xl:top-6 left-4 top-4 md:left-8 xl:hidden"
             onClick={() => navigate(-1)}
           >
             arrow_back_ios
           </span>
-          <h2 className="text-xl font-semibold text-center flex-1">Product Details</h2>
+          <h2 className="text-xl font-semibold text-center flex-1">
+            Product Details
+          </h2>
         </div>
 
         {/* Spacer to push content down */}
@@ -46,7 +47,7 @@ const DetailUrinal = () => {
         <div className="relative w-full bg-[#f7f7fc] p-4 rounded-t-lg z-10">
           <div className="mt-2">
             <h3 className="text-lg font-medium text-gray-700">
-            Wall-Mounted Ceramic Urinal - {selectedColor}
+              Wall-Mounted Ceramic Urinal - {selectedColor}
             </h3>
             <div className="flex items-center text-yellow-500">
               <FaStar /> <FaStar /> <FaStar /> <FaStar /> <FaStarHalfAlt />
@@ -95,7 +96,12 @@ const DetailUrinal = () => {
           <div className="mt-2">
             <h4 className="text-md font-medium text-gray-700">Description</h4>
             <p className="text-gray-600 mt-2 text-sm lg:text-base">
-            Transform your restroom into a space of sophistication with our Premium Urinal Collection. Designed for both style and functionality, our urinals feature sleek, wall-mounted designs with high-quality finishes in White, Black, Mocha, and Shark Grey. Crafted with durable, easy-to-clean surfaces, these urinals offer superior aesthetics and long-lasting performance.
+              Transform your restroom into a space of sophistication with our
+              Premium Urinal Collection. Designed for both style and
+              functionality, our urinals feature sleek, wall-mounted designs
+              with high-quality finishes in White, Black, Mocha, and Shark Grey.
+              Crafted with durable, easy-to-clean surfaces, these urinals offer
+              superior aesthetics and long-lasting performance.
             </p>
           </div>
         </div>

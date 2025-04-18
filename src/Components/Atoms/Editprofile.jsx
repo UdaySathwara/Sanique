@@ -6,21 +6,22 @@ export default function EditProfile() {
   const [showSaveModal, setShowSaveModal] = useState(false);
 
   return (
-    <div className="w-full mx-auto bg-[#f7f7fc] pt-6 px-6 min-h-screen relative pb-20 sm:px-10 md:px-16 lg:px-20 xl:px-24">
+    <div className="w-full mx-auto bg-[#f7f7fc] pt-4 px-6 min-h-screen relative pb-20 sm:px-10 md:px-16 lg:px-20 xl:px-24">
       {/* Background Circles */}
       <div className="bg-[#37e981] h-72 w-full absolute -top-32 left-0 rounded-b-[50%]"></div>
       <div className="bg-[#37e981] h-72 w-full absolute -top-32 right-0 rounded-b-[50%]"></div>
 
       {/* Header */}
       <div className="flex items-center justify-between py-2 mb-6 relative">
+        <span className="xl:block hidden xl:w-8"></span>
         <span
-          className="material-symbols-outlined cursor-pointer"
+          className="material-symbols-outlined cursor-pointer xl:hidden"
           onClick={() => navigate(-1)}
         >
           arrow_back_ios
         </span>
         <h2 className="text-xl font-semibold text-center">Edit Profile</h2>
-        <span className="w-8"></span> {/* Spacer for alignment */}
+        <span className="xl:w-8 w-6"></span> {/* Spacer for alignment */}
       </div>
 
       {/* Profile Picture */}
@@ -64,7 +65,7 @@ export default function EditProfile() {
 
       {/* Save Changes Button */}
       <button
-        className="bg-[#937bfb] text-white font-semibold w-full p-2 rounded-lg mt-6 sm:text-lg"
+        className="bg-[#937bfb] text-white font-semibold w-full p-2 rounded-lg mt-6 sm:text-lg md:w-56 lg:w-72 xl:w-80 mx-auto flex items-center justify-center hover:bg-[#f7f7fc] transition duration-300 ease-in-out border border-[#937bfb] hover:text-[#937bfb]" 
         onClick={() => setShowSaveModal(true)}
       >
         Save Changes

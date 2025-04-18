@@ -257,7 +257,7 @@ const SearchPage = () => {
         {/* Search Bar */}
         <div className="flex items-center gap-4 py-2">
           <span
-            className="material-symbols-outlined ml-2"
+            className="material-symbols-outlined ml-2 xl:hidden"
             onClick={() => navigate(-1)}
           >
             arrow_back_ios
@@ -355,7 +355,7 @@ const SearchPage = () => {
 
                 {/* Apply Button */}
                 <button
-                  className="w-full mt-8 py-2 px-4 mb-16 bg-indigo-500 text-white rounded-lg text-center"
+                  className="w-full mt-8 py-2 px-4 mb-16 bg-indigo-500 text-white hover:bg-[#f7f7fc] hover:text-indigo-500 border hover:border-indigo-500 rounded-md text-center  transition-all duration-200 md:w-56" 
                   onClick={() => setIsOpen(false)}
                 >
                   Apply Filter
@@ -405,7 +405,7 @@ const SearchPage = () => {
             {popularSearches.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center gap-3 p-2 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+                className="flex items-center gap-3 p-2 rounded-lg shadow-sm border border-gray-200 hover:bg-gray-100 transition-all hover:scale-[1.01] cursor-pointer"
                 onClick={() => handleSearchClick(item.path)}
               >
                 <div className="w-14 h-14 bg-gray-300 rounded-lg overflow-hidden">
@@ -446,7 +446,7 @@ const SearchPage = () => {
             {searchResults.map((product) => (
               <div
                 key={product.id}
-                className="flex items-center gap-3 p-2 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+                className="flex items-center gap-3 p-2 rounded-lg shadow-sm border border-gray-200 hover:bg-gray-100 transition-all hover:scale-[1.01] cursor-pointer"
                 onClick={() => navigate(product.path)}
               >
                 <div className="w-14 h-14 bg-gray-300 rounded-lg overflow-hidden">

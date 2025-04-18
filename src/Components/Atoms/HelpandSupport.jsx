@@ -4,11 +4,11 @@ export default function HelpandSupport() {
   const navigate = useNavigate();
 
   return (
-    <div className="max-w-full flex flex-col justify-center mx-auto bg-[#f7f7fc] min-h-screen px-6 pt-10 pb-20 text-gray-900">
+    <div className="max-w-full flex flex-col justify-center mx-auto bg-[#f7f7fc] min-h-screen p-4 pb-20 text-gray-900">
       {/* Header */}
-      <div className="flex items-center py-2 mb-6 relative">
+      <div className="flex items-center py-2 md:left-4 left-2 mb-6 relative ">
         <span
-          className="material-symbols-outlined cursor-pointer"
+          className="material-symbols-outlined cursor-pointer xl:hidden"
           onClick={() => navigate(-1)}
         >
           arrow_back_ios

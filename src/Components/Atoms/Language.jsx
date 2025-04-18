@@ -18,11 +18,11 @@ const LanguageSelection = () => {
   ];
 
   return (
-    <div className="bg-[#f7f7fc] min-h-screen p-6">
+    <div className="bg-[#f7f7fc] min-h-screen p-4">
       {/* Header */}
       <div className="flex items-center justify-between py-2 mb-4">
         <span
-          className="material-symbols-outlined text-xl cursor-pointer"
+          className="material-symbols-outlined text-xl cursor-pointer xl:hidden"
           onClick={() => navigate(-1)}
         >
           arrow_back_ios
